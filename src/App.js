@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState, useEffect } from "react"
-import Form from './components/Form'
+import { useState, useEffect } from "react";
+import Form from './components/Form';
+import DogDisplay from './components/DogDisplay';
 
 function App() {
 
@@ -19,7 +20,9 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Random Dog Photo Generator</h1>
       <Form dogGenerate={getDoggo} />
+      <DogDisplay dog={doggo} />
     </div>
   );
 }
