@@ -7,7 +7,7 @@ function App() {
 
   const [ doggo, setDoggo ] = useState(null);
 
-  const getDoggo = async => {
+  const getDoggo = async () => {
     const response = await fetch(
       'https://dog.ceo/api/breeds/image/random'
     )
@@ -15,11 +15,11 @@ function App() {
 
     setDoggo(data)
 
-  }
+  };
 
   return (
     <div className="App">
-
+      <Form dogGenerate={getDoggo} />
     </div>
   );
 }
